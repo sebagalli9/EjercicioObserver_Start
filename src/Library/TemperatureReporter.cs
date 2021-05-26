@@ -2,7 +2,7 @@ using System;
 
 namespace Observer
 {
-    public class TemperatureReporter
+    public class TemperatureReporter : IObserver
     {
         private bool first;
         private Temperature last;
@@ -34,5 +34,7 @@ namespace Observer
                     $"{this.provider.Current.Date.ToUniversalTime() - last.Date.ToUniversalTime():g}");
             }
         }
+
+        
     }
 }
