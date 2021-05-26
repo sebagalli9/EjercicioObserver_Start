@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 namespace Observer
 {
+    /* La clase TemperatureSensor es del tipo IObservable, dado que cuando esta cambia su estado
+       debe notificar a todos los dependientes, es decir, a las instancias de la clase
+       TemperatureReporter, del tipo IObserver.
+    */
     public class TemperatureSensor : IObservable
     {
         private List<IObserver> observers = new List<IObserver>();
@@ -58,7 +62,10 @@ namespace Observer
 
         public void Notify()
         {
-
+            foreach(IObserver observer in this.observers)
+            {
+                observer.Update();
+            }
         }
     }
 }

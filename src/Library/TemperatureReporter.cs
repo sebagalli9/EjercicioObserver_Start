@@ -2,6 +2,9 @@ using System;
 
 namespace Observer
 {
+    /* La clase TemperatureReporter es del tipo IObserver, dado que esta clase depende
+       de la clase TemperatureSensor para que la misma le notifique los cambios en su estado.
+    */
     public class TemperatureReporter : IObserver
     {
         private bool first;
