@@ -4,7 +4,7 @@ namespace Observer
 {
     public interface IObserver
     {
-        void UpdateChanges();
+        void Update();
     }
 }
 

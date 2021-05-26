@@ -2,10 +2,10 @@ using System;
 
 namespace Observer
 {
-    public interface IObvservable
+    public interface IObservable
     {
-        void AddObserver(IObserver observer);
-        void RemoveObserver(IObserver observer);
-        void NotifyChanges();
+        void Subscribe(IObserver observer);
+        void Unsubscribe(IObserver observer);
+        void Notify();
     }
 }
